@@ -43,12 +43,12 @@ function onGalleryContainerClick(event) {
 } 
 
 function opensModal(currentOriginaImg) {
-    const instance = basicLightbox.create(`<img src="${currentOriginaImg}" width="800" height="600">`);
-    instance.show();
+    const markuapTemplate = basicLightbox.create(`<img src="${currentOriginaImg}" width="800" height="600">`);
+    markuapTemplate.show();
 
     galleryContainer.addEventListener('keydown', (event) => {
         if (event.key === "Escape") {
-            instance.close();
+            markuapTemplate.close();
         }
     });   
   
