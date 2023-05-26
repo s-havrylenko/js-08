@@ -10,7 +10,7 @@ galleryContainer.addEventListener('click', onGalleryContainerClick);
 function createGalleryCardsMarkup (pictures) {
     return pictures.map(({preview, original, description}) => {
         return `
-        <div class="gallery__item">
+        <li class="gallery__item">
             <a class="gallery__link" href="large-image.jpg">
                 <img
                     class="gallery__image"
@@ -19,7 +19,7 @@ function createGalleryCardsMarkup (pictures) {
                     alt="${description}"
                 />
             </a>
-        </div>
+        </li>
         `;
     })
     .join('');

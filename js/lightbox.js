@@ -10,13 +10,16 @@ galleryContainer.addEventListener('click', onGalleryContainerClick);
 function createGalleryCardsMarkup (pictures) {
     return pictures.map(({preview, original, description}) => {
         return `
-        <a class="gallery__item" href="${original}">
-            <img 
-                class="gallery__image" 
-                src="${preview}" 
-                title="${description}"
-            />
-        </a>
+        <li class="gallery__item">
+            <a class="gallery__link" href="${original}">
+                <img 
+                    class="gallery__image" 
+                    src="${preview}" 
+                    title="${description}"
+                    alt="${description}"
+                />
+            </a>
+        </li>
         `;
     })
     .join('');
